@@ -103,7 +103,8 @@ if (typeof btoa == 'undefined') {
 	</canvas>
 	<div>
 		<p class="center">Export as: <a href="javascript:saveAsPNG()">PNG</a> | <a href="javascript:saveAsSVG()">SVG</a> | <a href="javascript:saveAsLaTeX()">LaTeX</a>
-          ----  Theme: <a href="javascript:setTheme(true)">Light</a> | <a href="javascript:setTheme(false)">Dark</a></p>
+            ----  Theme: <a href="javascript:setTheme(true)">Light</a> | <a href="javascript:setTheme(false)">Dark</a></p>
+        <p class="center">Save automata locally: <button onclick="saveAutomata()">Save...</button> | Load automata: <input type="file" id="file-input"></p>
 		<textarea id="output"></textarea>
 		<p>The big box above is the FSM designer.&nbsp; Here's how to use it:</p>
 		<ul>
