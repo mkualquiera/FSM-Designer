@@ -1033,6 +1033,14 @@ function snapNode(node) {
 	}
 }
 
+clearAutomata = function() {
+    if (window.confirm("Do you really want to remove all nodes and connections?")) {
+        nodes = [];
+        links = [];
+        saveBackup();
+    }
+}
+
 saveAutomata = function() {
 	saveBackup();
 	saveTextAs(localStorage['fsm'], "automata.json");
@@ -1060,8 +1068,10 @@ window.onload = function() {
 				console.debug("Automata is not valid json.");
 			}
 			if (valid) {
+                var ptheme = lightTheme;
 				localStorage['fsm'] = contents;
 				restoreBackup();
+                lightTheme = ptheme;
 			}
 			loadFileInput.value = "";
 		};
