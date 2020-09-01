@@ -1038,6 +1038,7 @@ clearAutomata = function() {
         nodes = [];
         links = [];
         saveBackup();
+        draw();
     }
 }
 
